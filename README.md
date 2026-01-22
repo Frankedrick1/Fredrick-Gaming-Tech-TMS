@@ -8,4 +8,4 @@ python app/app.py
 ```
 
 ## Deploy
-Ready for GitHub Pages / Render / Railway.
+Prepared for GitHub and Render.
