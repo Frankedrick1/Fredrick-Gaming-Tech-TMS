@@ -1,11 +1,27 @@
-
 # Web-Based Timesheet Management System
 
-## Run locally
-```bash
-pip install flask
-python app/app.py
-```
+A web-based timesheet management system developed using **Flask** and **SQLite**.  
+The system supports **admin and employee roles**, secure authentication, employee management, and persistent storage of timesheet records.
 
-## Deploy
-Prepared for GitHub and Render.
+---
+
+## 🚀 Features
+
+- Admin and Employee login
+- Employee self-registration
+- Role-based access control
+- Admin user management (view & delete employees)
+- Employee timesheet submission
+- Persistent data storage using SQLite
+- Mobile-friendly user interface
+- Deployed using Render cloud platform
+
+---
+
+## 🛠️ Technology Stack
+
+- **Backend:** Python (Flask)
+- **Frontend:** HTML, CSS
+- **Database:** SQLite
+- **Deployment:** Render
+- **Version Control:** GitHub
