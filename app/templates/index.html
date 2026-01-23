@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="container">
+
+    <h1>Welcome, {{ user }}</h1>
+    <p class="role-badge">{{ role }}</p>
+
+    <a href="/logout">Logout</a>
+
+    <hr>
+
+    {% if role == "employee" %}
+        <form method="post">
+            <input name="task" placeholder="Task Description" required>
+            <input name="hours" type="number" placeholder="Hours Worked" required>
+            <button type="submit">Submit Timesheet</button>
+        </form>
+    {% endif %}
+
+    {% if role == "admin" %}
+        <h3>Manage Employees</h3>
+        <ul>
+            {% for u in users %}
+                <li>
+                    {{ u.username }}
+                    <a href="/delete_user/{{ u.id }}"
+                       onclick="return confirm('Delete this user?')">
+                        Delete
+                    </a>
+                </li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+
+    <hr>
+
+    <h3>Submitted Timesheets</h3>
+    <ul>
+        {% for t in timesheets %}
+            <li>{{ t.employee }} – {{ t.task }} – {{ t.hours }} hrs</li>
+        {% endfor %}
+    </ul>
+
+</div>
+
+</body>
+</html>
