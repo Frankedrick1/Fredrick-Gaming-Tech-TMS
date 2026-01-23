@@ -36,7 +36,7 @@ def init_db():
 
     cursor.execute("""
     INSERT OR IGNORE INTO users (username, password, role)
-    VALUES ('admin', 'admin123', 'admin')
+    VALUES ('Fredrick', 'fred1236', 'admin')
     """)
 
     conn.commit()
